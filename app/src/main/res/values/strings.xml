@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Aplicacion Practica</string>
+    <string name="principal_iniciarPrimos">Numeros Primos</string>
+    <string name="principal_iniciarJuegos">Juego de Aciertos</string>
+    <string name="principal_desplazoImagenes">Desplazo Imagenes</string>
+    <string name="principal_seleccionImagenes">Selección Imagenes</string>
+    <string name="numerosPrimos_botonCalculo">Calcular</string>
+    <string name="numerosPrimos_txtNumero">Introduzca un numero:</string>
+    <string name="numerosPrimos_txtResult1">Resultado si se pulsa boton</string>
+    <string name="numerosPrimos_inNumber">0</string>
+    <string name="JuegoAciertos_btnVerificar">Verificar</string>
+    <string-array name="Paises">
+        <item>Espana</item>
+        <item>Inglaterra</item>
+        <item>Portugal</item>
+        <item>Francia</item>
+        <item>Italia</item>
+        <item>EEUU</item>
+        <item>Canada</item>
+        <item>Japon</item>
+    </string-array>
+    <string-array name="Capitales">
+        <item>Madrid</item>
+        <item>Londres</item>
+        <item>Lisboa</item>
+        <item>Paris</item>
+        <item>Roma</item>
+        <item>Wasshington D.C.</item>
+        <item>Ottawa</item>
+        <item>Tokyo</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
