@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context=".JuegoAcierto">
 
     <TextView
@@ -35,45 +35,18 @@
         android:id="@+id/btnVerificar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="@string/JuegoAciertos_btnVerificar"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment2"
-        app:layout_constraintVertical_bias="0.146" />
-
-    <ImageView
-        android:id="@+id/imgCorrecto"
-        android:layout_width="75dp"
-        android:layout_height="78dp"
-        android:layout_marginTop="10dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVerificar"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/checkverde" />
-
-    <ImageView
-        android:id="@+id/imgFallo"
-        android:layout_width="71dp"
-        android:layout_height="78dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVerificar"
-        app:layout_constraintVertical_bias="0.227"
-        app:srcCompat="@drawable/cruzroja" />
+        app:layout_constraintTop_toBottomOf="@+id/fragment2" />
 
     <fragment
         android:id="@+id/fragment1"
         android:name="es.studium.practicamovil2laverda.Paises"
-        android:layout_width="309dp"
-        android:layout_height="231dp"
+        android:layout_width="308dp"
+        android:layout_height="164dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,13 +60,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_end="340dp" />
 
     <fragment
         android:id="@+id/fragment2"
         android:name="es.studium.practicamovil2laverda.Capitales"
         android:layout_width="311dp"
-        android:layout_height="205dp"
+        android:layout_height="155dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,4 +74,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSelectedCapital"
         app:layout_constraintVertical_bias="0.0" />
+
+    <FrameLayout
+        android:id="@+id/frameComprobar"
+        android:layout_width="198dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerificar"
+        app:layout_constraintVertical_bias="0.0">
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

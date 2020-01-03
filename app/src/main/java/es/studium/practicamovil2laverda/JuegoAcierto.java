@@ -2,6 +2,7 @@ package es.studium.practicamovil2laverda;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.View;
@@ -18,13 +19,11 @@ public class JuegoAcierto extends AppCompatActivity implements Capitales.fragmen
     private TextView paisResult;
     private TextView capitalResult;
     private Button botonVerificar;
-    private ImageView correcto;
-    private ImageView fallo;
+    private FragmentTransaction transactionImg;
+    private Fragment fragmImg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        correcto = (ImageView) findViewById(R.id.imgCorrecto);
-        fallo = (ImageView) findViewById(R.id.imgFallo);
         setContentView(R.layout.activity_juego_acierto);
         fragmentCapitales= new Capitales();
         fragmentPaises= new Paises();
@@ -41,47 +40,53 @@ public class JuegoAcierto extends AppCompatActivity implements Capitales.fragmen
                         String capital = capitalResult.getText().toString();
                         String resultS = pais+"-"+capital;
                         //Hacer visible fall0
-                        if (arrayPaises[0] + "-" + arrayCapitales==resultS) {
+                        if ((arrayPaises[0] + "-" + arrayCapitales[0]).equals(resultS)) {
                             //ejecutar ok
-                            correcto.setVisibility(View.VISIBLE);
-                            fallo.setVisibility(View.GONE);
-                        } else if (arrayPaises[1] + "-" + arrayCapitales[1]==resultS) {
+                            ejecutarOk();
+                        } else if ((arrayPaises[1] + "-" + arrayCapitales[1]).equals(resultS)) {
                             //ejecutar ok
-                            correcto.setVisibility(View.VISIBLE);
-                            fallo.setVisibility(View.GONE);
-                        } else if (arrayPaises[2] + "-" + arrayCapitales[2]==resultS) {
+                            ejecutarOk();
+                        } else if ((arrayPaises[2] + "-" + arrayCapitales[2]).equals(resultS)) {
                             //ejecutar ok
-                            correcto.setVisibility(View.VISIBLE);
-                            fallo.setVisibility(View.GONE);
-                        } else if (arrayPaises[3] + "-" + arrayCapitales[3]==resultS) {
+                            ejecutarOk();
+                        } else if ((arrayPaises[3] + "-" + arrayCapitales[3]).equals(resultS)) {
                             //ejecutar ok
-                            correcto.setVisibility(View.VISIBLE);
-                            fallo.setVisibility(View.GONE);
-                        } else if (arrayPaises[4] + "-" + arrayCapitales[4]==resultS) {
+                            ejecutarOk();
+                        } else if ((arrayPaises[4] + "-" + arrayCapitales[4]).equals(resultS)) {
                             //ejecutar ok
-                            correcto.setVisibility(View.VISIBLE);
-                            fallo.setVisibility(View.GONE);
-                        } else if (arrayPaises[5] + "-" + arrayCapitales[5]==resultS) {
+                            ejecutarOk();
+                        } else if ((arrayPaises[5] + "-" + arrayCapitales[5]).equals(resultS)) {
                             //ejecutar ok
-                            correcto.setVisibility(View.VISIBLE);
-                            fallo.setVisibility(View.GONE);
-                        } else if (arrayPaises[6] + "-" + arrayCapitales[6]==resultS) {
+                            ejecutarOk();
+                        } else if ((arrayPaises[4] + "-" + arrayCapitales[6]).equals(resultS)) {
                             //ejecutar ok
-                            correcto.setVisibility(View.VISIBLE);
-                            fallo.setVisibility(View.GONE);
-                        } else if (arrayPaises[7] + "-" + arrayCapitales[7]==resultS) {
+                            ejecutarOk();
+                        } else if ((arrayPaises[4] + "-" + arrayCapitales[7]).equals(resultS)) {
                             //ejecutar ok
-                            correcto.setVisibility(View.VISIBLE);
-                            fallo.setVisibility(View.GONE);
+                            ejecutarOk();
                         }else{
                             //ejecutar fallo
-                            correcto.setVisibility(View.GONE);
-                            fallo.setVisibility(View.VISIBLE);
+                            ejecutarFallo();
                         }
                     }
                 }
         );
     }
+
+    private void ejecutarFallo() {
+        fragmImg = new FragmentoFalloImg();
+        transactionImg= getSupportFragmentManager().beginTransaction();
+        transactionImg.add(R.id.frameComprobar, fragmImg);
+        transactionImg.commit();
+    }
+
+    private void ejecutarOk() {
+        fragmImg = new FragmentCorrectoImg();
+        transactionImg = getSupportFragmentManager().beginTransaction();
+        transactionImg.add(R.id.frameComprobar, fragmImg);
+        transactionImg.commit();
+    }
+
     @Override
     public void onInputCapitalSent(String x) {
       capitalResult.setText(x);
