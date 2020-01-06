@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".boton2.Paises">
+    tools:context=".boton2.FragmentPaises">
 
     <!-- TODO: Update blank fragment layout -->
 

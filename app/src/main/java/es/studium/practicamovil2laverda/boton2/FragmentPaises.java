@@ -16,13 +16,10 @@ import android.widget.ListView;
 import es.studium.practicamovil2laverda.R;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class Paises extends Fragment {
+public class FragmentPaises extends Fragment {
 
 
-    public Paises() {
+    public FragmentPaises() {
         // Required empty public constructor
     }
     private String [] arrayPaises;
@@ -70,6 +67,12 @@ public class Paises extends Fragment {
                         break;
                     case 7:
                         paisSeleccionado=arrayPaises[7];
+                        break;
+                    case 8:
+                        paisSeleccionado=arrayPaises[8];
+                        break;
+                    case 9:
+                        paisSeleccionado=arrayPaises[9];
                         break;
                 }
                 fragmentPaisListener.onInputPaisSent(paisSeleccionado);

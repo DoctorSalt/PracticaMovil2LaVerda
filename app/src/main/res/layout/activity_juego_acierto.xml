@@ -50,7 +50,7 @@
 
     <fragment
         android:id="@+id/fragment1"
-        android:name="es.studium.practicamovil2laverda.boton2.Paises"
+        android:name="es.studium.practicamovil2laverda.boton2.FragmentPaises"
         android:layout_width="308dp"
         android:layout_height="164dp"
         android:layout_marginTop="8dp"
@@ -70,7 +70,7 @@
 
     <fragment
         android:id="@+id/fragment2"
-        android:name="es.studium.practicamovil2laverda.boton2.Capitales"
+        android:name="es.studium.practicamovil2laverda.boton2.FragmentCapitales"
         android:layout_width="311dp"
         android:layout_height="155dp"
         android:layout_marginTop="8dp"

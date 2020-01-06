@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,12 +13,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.lang.reflect.Array;
 
 import es.studium.practicamovil2laverda.R;
 
 
-public class Capitales extends Fragment {
+public class FragmentCapitales extends Fragment {
     private String [] arrayCapitales;
     private ListView listaCapitales;
     private ArrayAdapter<String> ListViewAdapter;
@@ -66,6 +64,13 @@ public class Capitales extends Fragment {
                     case 7:
                         capitalSeleccionada=arrayCapitales[7];
                         break;
+                    case 8:
+                        capitalSeleccionada=arrayCapitales[8];
+                        break;
+                    case 9:
+                        capitalSeleccionada=arrayCapitales[9];
+                        break;
+
                 }
                 fragmentCapListener.onInputCapitalSent(capitalSeleccionada);
             }

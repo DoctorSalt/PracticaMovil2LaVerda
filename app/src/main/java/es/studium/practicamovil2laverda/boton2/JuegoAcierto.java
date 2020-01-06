@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 import es.studium.practicamovil2laverda.R;
 
-public class JuegoAcierto extends AppCompatActivity implements Capitales.fragmentCapitalesListener, Paises.fragmentPaisesListener {
-    private Capitales fragmentCapitales;
-    private Paises fragmentPaises;
+public class JuegoAcierto extends AppCompatActivity implements FragmentCapitales.fragmentCapitalesListener, FragmentPaises.fragmentPaisesListener {
+    private FragmentCapitales fragmentCapitales;
+    private FragmentPaises fragmentPaises;
     private TextView paisResult;
     private TextView capitalResult;
     private Button botonVerificar;
@@ -83,8 +83,8 @@ public class JuegoAcierto extends AppCompatActivity implements Capitales.fragmen
     }
 
     private void fragmentVinculacion() {
-        fragmentCapitales= new Capitales();
-        fragmentPaises= new Paises();
+        fragmentCapitales= new FragmentCapitales();
+        fragmentPaises= new FragmentPaises();
         getSupportFragmentManager().beginTransaction().commit();
     }
 
