@@ -14,47 +14,46 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inNumber"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintVertical_bias="0.082" />
 
     <TextView
         android:id="@+id/txtResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="20dp"
         android:text="@string/numerosPrimos_txtResult1"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.387"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCalculo" />
 
     <TextView
         android:id="@+id/txtNumero"
-        android:layout_width="239dp"
-        android:layout_height="60dp"
+        android:layout_width="195dp"
+        android:layout_height="35dp"
         android:layout_marginStart="4dp"
         android:text="@string/numerosPrimos_txtNumero"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.18" />
+        app:layout_constraintVertical_bias="0.153" />
 
     <EditText
         android:id="@+id/inNumber"
         android:layout_width="191dp"
         android:layout_height="41dp"
+        android:layout_marginTop="48dp"
         android:ems="10"
         android:hint="@string/numerosPrimos_inNumber"
         android:inputType="number"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNumero"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintStart_toEndOf="@+id/txtNumero"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

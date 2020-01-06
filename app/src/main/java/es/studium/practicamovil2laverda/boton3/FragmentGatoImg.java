@@ -1,4 +1,4 @@
-package es.studium.practicamovil2laverda;
+package es.studium.practicamovil2laverda.boton3;
 
 
 import android.os.Bundle;
@@ -9,14 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import es.studium.practicamovil2laverda.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class FragmentFerrariImg extends Fragment {
+public class FragmentGatoImg extends Fragment {
 
 
-    public FragmentFerrariImg() {
+    public FragmentGatoImg() {
         // Required empty public constructor
     }
 
@@ -25,7 +23,7 @@ public class FragmentFerrariImg extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment_ferrari_img, container, false);
+        return inflater.inflate(R.layout.fragment_fragment_gato_img, container, false);
     }
 
 }

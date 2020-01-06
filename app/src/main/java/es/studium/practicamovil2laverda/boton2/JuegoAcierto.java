@@ -1,4 +1,4 @@
-package es.studium.practicamovil2laverda;
+package es.studium.practicamovil2laverda.boton2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -7,11 +7,9 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import es.studium.practicamovil2laverda.R;
 
 public class JuegoAcierto extends AppCompatActivity implements Capitales.fragmentCapitalesListener, Paises.fragmentPaisesListener {
     private Capitales fragmentCapitales;
@@ -20,11 +18,18 @@ public class JuegoAcierto extends AppCompatActivity implements Capitales.fragmen
     private TextView capitalResult;
     private Button botonVerificar;
     private FragmentTransaction transactionImg;
-    private Fragment fragmImg;
+    private FragmentCorrectoImg frCorrecto;
+    private FragmentoFalloImg frFallo;
+    private boolean verificarUso;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(getResources().getText(R.string.principal_iniciarJuegos));
         setContentView(R.layout.activity_juego_acierto);
+        verificarUso=false;
+        frCorrecto= new FragmentCorrectoImg();
+        frFallo = new FragmentoFalloImg();
         fragmentCapitales= new Capitales();
         fragmentPaises= new Paises();
         getSupportFragmentManager().beginTransaction().commit();
@@ -74,17 +79,39 @@ public class JuegoAcierto extends AppCompatActivity implements Capitales.fragmen
     }
 
     private void ejecutarFallo() {
-        fragmImg = new FragmentoFalloImg();
-        transactionImg= getSupportFragmentManager().beginTransaction();
-        transactionImg.add(R.id.frameComprobar, fragmImg);
-        transactionImg.commit();
+        if (verificarUso) {
+            transactionImg = getSupportFragmentManager().beginTransaction();
+            transactionImg.remove(frCorrecto);
+            transactionImg.remove(frFallo);
+            transactionImg.commit();
+            transactionImg= getSupportFragmentManager().beginTransaction();
+            transactionImg.add(R.id.frameComprobar, frFallo);
+            transactionImg.commit();
+            verificarUso=false;
+        }else{
+            transactionImg= getSupportFragmentManager().beginTransaction();
+            transactionImg.add(R.id.frameComprobar, frFallo);
+            transactionImg.commit();
+            verificarUso=true;
+        }
     }
 
     private void ejecutarOk() {
-        fragmImg = new FragmentCorrectoImg();
-        transactionImg = getSupportFragmentManager().beginTransaction();
-        transactionImg.add(R.id.frameComprobar, fragmImg);
-        transactionImg.commit();
+        if (verificarUso) {
+            transactionImg = getSupportFragmentManager().beginTransaction();
+            transactionImg.remove(frCorrecto);
+            transactionImg.remove(frFallo);
+            transactionImg.commit();
+            transactionImg= getSupportFragmentManager().beginTransaction();
+            transactionImg.add(R.id.frameComprobar, frCorrecto);
+            transactionImg.commit();
+            verificarUso=false;
+        }else{
+            transactionImg= getSupportFragmentManager().beginTransaction();
+            transactionImg.add(R.id.frameComprobar, frCorrecto);
+            transactionImg.commit();
+            verificarUso=true;
+        }
     }
 
     @Override

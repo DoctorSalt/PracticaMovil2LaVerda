@@ -9,10 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SeleccionImagen"></activity>
-        <activity android:name=".DesplazarImagen" />
-        <activity android:name=".JuegoAcierto" />
-        <activity android:name=".NumeroPrimos" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,6 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import es.studium.practicamovil2laverda.boton1.NumeroPrimos;
+import es.studium.practicamovil2laverda.boton2.JuegoAcierto;
+import es.studium.practicamovil2laverda.boton3.DesplazarImagen;
+import es.studium.practicamovil2laverda.boton4.SeleccionImagen;
+
 public class MainActivity extends AppCompatActivity {
     Intent intentPrimos;
     Intent intentJuegoAciertos;
@@ -15,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        intentPrimos = new Intent(this,NumeroPrimos.class);
-        intentJuegoAciertos = new Intent(this,JuegoAcierto.class);
-        intentDesplazarImagen = new Intent(this,DesplazarImagen.class);
-        intentSeleccionImagen = new Intent(this,SeleccionImagen.class);
+        intentPrimos = new Intent(this, NumeroPrimos.class);
+        intentJuegoAciertos = new Intent(this, JuegoAcierto.class);
+        intentDesplazarImagen = new Intent(this, DesplazarImagen.class);
+        intentSeleccionImagen = new Intent(this, SeleccionImagen.class);
     }
     public void iniciarPrimos(View view) {
         startActivity(intentPrimos);

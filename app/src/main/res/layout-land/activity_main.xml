@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnNumPrim"
+        android:layout_width="148dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:onClick="iniciarPrimos"
+        android:text="@string/principal_iniciarPrimos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btnDespImg"
+        android:layout_width="148dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:onClick="iniciarDesplazoImagen"
+        android:text="@string/principal_desplazoImagenes"
+        app:layout_constraintStart_toEndOf="@+id/btnJuegoS"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btnSeleccImg"
+        android:layout_width="148dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:onClick="iniciarSeleccionImagen"
+        android:text="@string/principal_seleccionImagenes"
+        app:layout_constraintStart_toEndOf="@+id/btnDespImg"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btnJuegoS"
+        android:layout_width="148dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:onClick="iniciarJuegos"
+        android:text="@string/principal_iniciarJuegos"
+        app:layout_constraintStart_toEndOf="@+id/btnNumPrim"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="725dp"
+        android:layout_height="148dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/soss" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

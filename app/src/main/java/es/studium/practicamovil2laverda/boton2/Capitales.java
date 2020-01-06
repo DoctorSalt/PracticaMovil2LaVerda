@@ -1,4 +1,4 @@
-package es.studium.practicamovil2laverda;
+package es.studium.practicamovil2laverda.boton2;
 
 
 import android.content.Context;
@@ -15,6 +15,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.lang.reflect.Array;
+
+import es.studium.practicamovil2laverda.R;
 
 
 /**

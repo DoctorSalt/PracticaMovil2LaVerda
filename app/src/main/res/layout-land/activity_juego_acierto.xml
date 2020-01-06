@@ -2,55 +2,52 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".boton2.JuegoAcierto">
 
     <TextView
         android:id="@+id/txtSelectedPais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
         android:text="Pais"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.047" />
 
     <TextView
         android:id="@+id/txtSelectedCapital"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:text="Capital"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment1"
-        app:layout_constraintVertical_bias="0.004" />
+        app:layout_constraintHorizontal_bias="0.632"
+        app:layout_constraintStart_toEndOf="@+id/txtSelectedPais"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048" />
 
     <Button
         android:id="@+id/btnVerificar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:text="@string/JuegoAciertos_btnVerificar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragment2" />
 
     <fragment
         android:id="@+id/fragment1"
         android:name="es.studium.practicamovil2laverda.boton2.Paises"
-        android:layout_width="308dp"
-        android:layout_height="164dp"
+        android:layout_width="256dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.411"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSelectedPais"
         app:layout_constraintVertical_bias="0.0" />
@@ -60,29 +57,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="373dp" />
+        app:layout_constraintGuide_begin="723dp" />
 
     <fragment
         android:id="@+id/fragment2"
         android:name="es.studium.practicamovil2laverda.boton2.Capitales"
-        android:layout_width="311dp"
-        android:layout_height="155dp"
+        android:layout_width="280dp"
+        android:layout_height="79dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.408"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toEndOf="@+id/fragment1"
         app:layout_constraintTop_toBottomOf="@+id/txtSelectedCapital"
         app:layout_constraintVertical_bias="0.0" />
 
     <FrameLayout
         android:id="@+id/frameComprobar"
-        android:layout_width="160dp"
-        android:layout_height="86dp"
+        android:layout_width="140dp"
+        android:layout_height="61dp"
         android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnVerificar"
         app:layout_constraintVertical_bias="0.0">
