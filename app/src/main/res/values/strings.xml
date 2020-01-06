@@ -4,20 +4,28 @@
     <string name="principal_iniciarJuegos">Juego de Aciertos</string>
     <string name="principal_desplazoImagenes">Desplazo Imagenes</string>
     <string name="principal_seleccionImagenes">Selección Imagenes</string>
+    <string name="juegoAcierto_PaisSeleccionado">Pais</string>
+    <string name="juegoAcierto_CapitalSeleccionada">Capital</string>
     <string name="numerosPrimos_botonCalculo">Calcular</string>
     <string name="numerosPrimos_txtNumero">Introduzca un numero:</string>
     <string name="numerosPrimos_txtResult1">Resultado si se pulsa boton</string>
     <string name="numerosPrimos_inNumber">0</string>
     <string name="JuegoAciertos_btnVerificar">Verificar</string>
+    <string name="SeleccionImagenes_Ferrari">Ferrari F40</string>
+    <string name="SeleccionImagenes_Mclaren">Mclaren F1</string>
+    <string name="SeleccionImagenes_Mazda">Mazda 787b</string>
+    <string name="SeleccionImagenes_Ruf">RUF Yellow Bird</string>
     <string-array name="Paises">
-        <item>Espana</item>
+        <item>España</item>
         <item>Inglaterra</item>
         <item>Portugal</item>
         <item>Francia</item>
         <item>Italia</item>
         <item>EEUU</item>
         <item>Canada</item>
-        <item>Japon</item>
+        <item>Japón</item>
+        <item>Peru</item>
+        <item>China</item>
     </string-array>
     <string-array name="Capitales">
         <item>Madrid</item>
@@ -28,5 +36,7 @@
         <item>Wasshington D.C.</item>
         <item>Ottawa</item>
         <item>Tokyo</item>
+        <item>Lima</item>
+        <item>Pekin</item>
     </string-array>
 </resources>

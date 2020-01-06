@@ -1,7 +1,6 @@
 package es.studium.practicamovil2laverda.boton2;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
@@ -27,12 +26,8 @@ public class JuegoAcierto extends AppCompatActivity implements Capitales.fragmen
         super.onCreate(savedInstanceState);
         setTitle(getResources().getText(R.string.principal_iniciarJuegos));
         setContentView(R.layout.activity_juego_acierto);
-        verificarUso=false;
-        frCorrecto= new FragmentCorrectoImg();
-        frFallo = new FragmentoFalloImg();
-        fragmentCapitales= new Capitales();
-        fragmentPaises= new Paises();
-        getSupportFragmentManager().beginTransaction().commit();
+        creacionResultImg();
+        fragmentVinculacion();
         paisResult = findViewById(R.id.txtSelectedPais);
         capitalResult = findViewById(R.id.txtSelectedCapital);
         botonVerificar = findViewById(R.id.btnVerificar);
@@ -63,13 +58,22 @@ public class JuegoAcierto extends AppCompatActivity implements Capitales.fragmen
                         } else if ((arrayPaises[5] + "-" + arrayCapitales[5]).equals(resultS)) {
                             //ejecutar ok
                             ejecutarOk();
-                        } else if ((arrayPaises[4] + "-" + arrayCapitales[6]).equals(resultS)) {
+                        } else if ((arrayPaises[6] + "-" + arrayCapitales[6]).equals(resultS)) {
                             //ejecutar ok
                             ejecutarOk();
-                        } else if ((arrayPaises[4] + "-" + arrayCapitales[7]).equals(resultS)) {
+                        } else if ((arrayPaises[7] + "-" + arrayCapitales[7]).equals(resultS)) {
                             //ejecutar ok
                             ejecutarOk();
-                        }else{
+                        }
+                        else if ((arrayPaises[8] + "-" + arrayCapitales[8]).equals(resultS)){
+                            //ejecutar ok
+                            ejecutarOk();
+                        }
+                        else if ((arrayPaises[9] + "-" + arrayCapitales[9]).equals(resultS)){
+                            //ejecutar ok
+                            ejecutarOk();
+                        }
+                        else{
                             //ejecutar fallo
                             ejecutarFallo();
                         }
@@ -78,40 +82,50 @@ public class JuegoAcierto extends AppCompatActivity implements Capitales.fragmen
         );
     }
 
+    private void fragmentVinculacion() {
+        fragmentCapitales= new Capitales();
+        fragmentPaises= new Paises();
+        getSupportFragmentManager().beginTransaction().commit();
+    }
+
+    private void creacionResultImg() {
+        frCorrecto= new FragmentCorrectoImg();
+        frFallo = new FragmentoFalloImg();
+        verificarUso=false;
+        transactionImg = getSupportFragmentManager().beginTransaction();
+        transactionImg.add(R.id.frameComprobar, frFallo);
+        transactionImg.commit();
+    }
+
     private void ejecutarFallo() {
+
         if (verificarUso) {
             transactionImg = getSupportFragmentManager().beginTransaction();
+
             transactionImg.remove(frCorrecto);
             transactionImg.remove(frFallo);
+
             transactionImg.commit();
-            transactionImg= getSupportFragmentManager().beginTransaction();
+
+            transactionImg = getSupportFragmentManager().beginTransaction();
             transactionImg.add(R.id.frameComprobar, frFallo);
             transactionImg.commit();
-            verificarUso=false;
-        }else{
-            transactionImg= getSupportFragmentManager().beginTransaction();
-            transactionImg.add(R.id.frameComprobar, frFallo);
-            transactionImg.commit();
-            verificarUso=true;
         }
+        verificarUso=false;
     }
 
     private void ejecutarOk() {
-        if (verificarUso) {
+        if (!verificarUso) {
             transactionImg = getSupportFragmentManager().beginTransaction();
             transactionImg.remove(frCorrecto);
             transactionImg.remove(frFallo);
             transactionImg.commit();
-            transactionImg= getSupportFragmentManager().beginTransaction();
+            transactionImg = getSupportFragmentManager().beginTransaction();
             transactionImg.add(R.id.frameComprobar, frCorrecto);
             transactionImg.commit();
-            verificarUso=false;
-        }else{
-            transactionImg= getSupportFragmentManager().beginTransaction();
-            transactionImg.add(R.id.frameComprobar, frCorrecto);
-            transactionImg.commit();
-            verificarUso=true;
+
         }
+        verificarUso=true;
     }
 
     @Override

@@ -4,17 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".boton4.SeleccionImagen">
+    tools:context=".boton4.SeleccionImagen"
+    android:background="#C665D0">
 
     <Button
         android:id="@+id/btnFerrari"
+        android:text="@string/SeleccionImagenes_Ferrari"
         android:layout_width="144dp"
         android:layout_height="80dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="Ferrari F40"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentCoche" />
+        app:layout_constraintTop_toBottomOf="@+id/fragmentCoche"
+        style="@style/BotonRojo"/>
 
     <Button
         android:id="@+id/btnMazda"
@@ -22,17 +24,19 @@
         android:layout_height="80dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
-        android:text="Madza 787"
+        android:text="@string/SeleccionImagenes_Mazda"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFerrari" />
+        app:layout_constraintTop_toBottomOf="@+id/btnFerrari"
+        style="@style/BotonAzul"/>
 
     <Button
         android:id="@+id/btnRUF"
+        style="@style/BotonAmarillo"
         android:layout_width="144dp"
         android:layout_height="80dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="28dp"
-        android:text="RUF Yellow Bird"
+        android:text="@string/SeleccionImagenes_Ruf"
         app:layout_constraintStart_toEndOf="@+id/btnMazda"
         app:layout_constraintTop_toBottomOf="@+id/btnMclaren" />
 
@@ -40,11 +44,12 @@
         android:id="@+id/btnMclaren"
         android:layout_width="144dp"
         android:layout_height="80dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="32dp"
-        android:text="Mclaren F1"
+        android:text="@string/SeleccionImagenes_Mclaren"
         app:layout_constraintStart_toEndOf="@+id/btnFerrari"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentCoche" />
+        app:layout_constraintTop_toBottomOf="@+id/fragmentCoche"
+        style="@style/BotonNaranja"/>
 
     <FrameLayout
         android:id="@+id/fragmentCoche"

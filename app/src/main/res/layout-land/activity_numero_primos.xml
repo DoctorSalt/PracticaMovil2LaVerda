@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C665D0"
     tools:context=".boton1.NumeroPrimos">
 
     <Button
         android:id="@+id/btnCalculo"
+        style="@style/BotonBasico"
         android:layout_width="195dp"
         android:layout_height="79dp"
         android:text="@string/numerosPrimos_botonCalculo"
@@ -25,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/numerosPrimos_txtResult1"
+        android:textColor="#226D00"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.387"
@@ -37,6 +40,7 @@
         android:layout_height="35dp"
         android:layout_marginStart="4dp"
         android:text="@string/numerosPrimos_txtNumero"
+        android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,6 +57,7 @@
         android:ems="10"
         android:hint="@string/numerosPrimos_inNumber"
         android:inputType="number"
+        android:textColorHint="#000000"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/txtNumero"
         app:layout_constraintTop_toTopOf="parent" />

@@ -8,5 +8,6 @@
     <ListView
         android:id="@+id/ListaCapitales"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="#84E5E5" />
 </FrameLayout>

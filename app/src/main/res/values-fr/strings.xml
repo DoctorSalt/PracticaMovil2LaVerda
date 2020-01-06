@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Application pratique</string>
+    <string name="JuegoAciertos_btnVerificar">Vérifier</string>
+    <string name="SeleccionImagenes_Mazda">Mazda 787b</string>
+    <string name="SeleccionImagenes_Ferrari">Ferrari F40</string>
+    <string name="SeleccionImagenes_Mclaren">Mclaren F1</string>
+    <string name="SeleccionImagenes_Ruf">RUF Yellow Bird</string>
+    <string name="numerosPrimos_botonCalculo">Calculer</string>
+    <string name="numerosPrimos_inNumber">0</string>
+    <string name="numerosPrimos_txtNumero">Introduzca un numero:</string>
+    <string name="numerosPrimos_txtResult1">Résultat si le bouton est enfoncé</string>
+    <string name="principal_desplazoImagenes">Faire défiler les images</string>
+    <string name="principal_iniciarPrimos">Nombres Premiers</string>
+    <string name="principal_seleccionImagenes">Images de Sélection</string>
+    <string name="principal_iniciarJuegos">Jeu de réussite</string>
+    <string name="juegoAcierto_CapitalSeleccionada">Capitale</string>
+    <string name="juegoAcierto_PaisSeleccionado">Pays</string>
+    <string-array name="Paises">
+        <item>L'Espagne</item>
+        <item>L'Angleterre</item>
+        <item>Le Portugal</item>
+        <item>La France</item>
+        <item>L'Italie</item>
+        <item>USA</item>
+        <item>Le Canada</item>
+        <item>Le Japon</item>
+        <item>Pérou</item>
+        <item>La Chine</item>
+    </string-array>
+    <string-array name="Capitales">
+        <item>Madrid</item>
+        <item>Londres</item>
+        <item>Lisbonne</item>
+        <item>Paris</item>
+        <item>Rome</item>
+        <item>Wasshington D.C.</item>
+        <item>Ottawa</item>
+        <item>Tokyo</item>
+        <item>Lima</item>
+        <item>Pékin</item>
+    </string-array>
+</resources>

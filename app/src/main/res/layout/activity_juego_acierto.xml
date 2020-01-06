@@ -4,13 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".boton2.JuegoAcierto">
+    tools:context=".boton2.JuegoAcierto"
+    android:background="#C665D0">
 
     <TextView
         android:id="@+id/txtSelectedPais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pais"
+        android:text="@string/juegoAcierto_PaisSeleccionado"
+        android:textColor="#161316"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.468"
@@ -23,7 +26,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Capital"
+        android:text="@string/juegoAcierto_CapitalSeleccionada"
+        android:textColor="#161316"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.439"
@@ -33,12 +38,13 @@
 
     <Button
         android:id="@+id/btnVerificar"
+        style="@style/BotonBasico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="@string/JuegoAciertos_btnVerificar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragment2" />
 
@@ -50,7 +56,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSelectedPais"
         app:layout_constraintVertical_bias="0.0" />

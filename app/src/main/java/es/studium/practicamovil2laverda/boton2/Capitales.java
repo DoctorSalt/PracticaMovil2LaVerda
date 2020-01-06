@@ -19,17 +19,12 @@ import java.lang.reflect.Array;
 import es.studium.practicamovil2laverda.R;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class Capitales extends Fragment {
-
-
-
     private String [] arrayCapitales;
     private ListView listaCapitales;
     private ArrayAdapter<String> ListViewAdapter;
     private fragmentCapitalesListener fragmentCapListener;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
