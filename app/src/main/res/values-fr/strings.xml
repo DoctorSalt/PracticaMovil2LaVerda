@@ -17,16 +17,16 @@
     <string name="juegoAcierto_CapitalSeleccionada">Capitale</string>
     <string name="juegoAcierto_PaisSeleccionado">Pays</string>
     <string-array name="Paises">
-        <item>L'Espagne</item>
-        <item>L'Angleterre</item>
-        <item>Le Portugal</item>
-        <item>La France</item>
-        <item>L'Italie</item>
+        <item>Espagne</item>
+        <item>Angleterre</item>
+        <item>Portugal</item>
+        <item>France</item>
+        <item>Italie</item>
         <item>USA</item>
-        <item>Le Canada</item>
-        <item>Le Japon</item>
+        <item>Canada</item>
+        <item>apon</item>
         <item>Pérou</item>
-        <item>La Chine</item>
+        <item>Chine</item>
     </string-array>
     <string-array name="Capitales">
         <item>Madrid</item>
